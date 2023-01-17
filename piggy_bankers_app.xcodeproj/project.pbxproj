@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
+		CFDB82982976F08D001317A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* ContentView.swift */; };
+		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
+		CFDB829D2976F08E001317A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */; };
+		CFDB82A72976F08E001317A3 /* piggy_bankers_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82A62976F08E001317A3 /* piggy_bankers_appTests.swift */; };
+		CFDB82B12976F08E001317A3 /* piggy_bankers_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82B02976F08E001317A3 /* piggy_bankers_appUITests.swift */; };
+		CFDB82B32976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82B22976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFDB82A32976F08E001317A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFDB828A2976F08D001317A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDB82912976F08D001317A3;
+			remoteInfo = piggy_bankers_app;
+		};
+		CFDB82AD2976F08E001317A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFDB828A2976F08D001317A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDB82912976F08D001317A3;
+			remoteInfo = piggy_bankers_app;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
+		CFDB82972976F08D001317A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CFDB82992976F08E001317A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFDB82A22976F08E001317A3 /* piggy_bankers_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = piggy_bankers_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDB82A62976F08E001317A3 /* piggy_bankers_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appTests.swift; sourceTree = "<group>"; };
+		CFDB82AC2976F08E001317A3 /* piggy_bankers_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = piggy_bankers_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDB82B02976F08E001317A3 /* piggy_bankers_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appUITests.swift; sourceTree = "<group>"; };
+		CFDB82B22976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFDB828F2976F08D001317A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDB829F2976F08E001317A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDB82A92976F08E001317A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFDB82892976F08D001317A3 = {
+			isa = PBXGroup;
+			children = (
+				CFDB82942976F08D001317A3 /* piggy_bankers_app */,
+				CFDB82A52976F08E001317A3 /* piggy_bankers_appTests */,
+				CFDB82AF2976F08E001317A3 /* piggy_bankers_appUITests */,
+				CFDB82932976F08D001317A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFDB82932976F08D001317A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB82922976F08D001317A3 /* piggy_bankers_app.app */,
+				CFDB82A22976F08E001317A3 /* piggy_bankers_appTests.xctest */,
+				CFDB82AC2976F08E001317A3 /* piggy_bankers_appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFDB82942976F08D001317A3 /* piggy_bankers_app */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */,
+				CFDB82972976F08D001317A3 /* ContentView.swift */,
+				CFDB82992976F08E001317A3 /* Assets.xcassets */,
+				CFDB829B2976F08E001317A3 /* Preview Content */,
+			);
+			path = piggy_bankers_app;
+			sourceTree = "<group>";
+		};
+		CFDB829B2976F08E001317A3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFDB82A52976F08E001317A3 /* piggy_bankers_appTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB82A62976F08E001317A3 /* piggy_bankers_appTests.swift */,
+			);
+			path = piggy_bankers_appTests;
+			sourceTree = "<group>";
+		};
+		CFDB82AF2976F08E001317A3 /* piggy_bankers_appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB82B02976F08E001317A3 /* piggy_bankers_appUITests.swift */,
+				CFDB82B22976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift */,
+			);
+			path = piggy_bankers_appUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFDB82912976F08D001317A3 /* piggy_bankers_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDB82B62976F08E001317A3 /* Build configuration list for PBXNativeTarget "piggy_bankers_app" */;
+			buildPhases = (
+				CFDB828E2976F08D001317A3 /* Sources */,
+				CFDB828F2976F08D001317A3 /* Frameworks */,
+				CFDB82902976F08D001317A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = piggy_bankers_app;
+			productName = piggy_bankers_app;
+			productReference = CFDB82922976F08D001317A3 /* piggy_bankers_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFDB82A12976F08E001317A3 /* piggy_bankers_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDB82B92976F08E001317A3 /* Build configuration list for PBXNativeTarget "piggy_bankers_appTests" */;
+			buildPhases = (
+				CFDB829E2976F08E001317A3 /* Sources */,
+				CFDB829F2976F08E001317A3 /* Frameworks */,
+				CFDB82A02976F08E001317A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFDB82A42976F08E001317A3 /* PBXTargetDependency */,
+			);
+			name = piggy_bankers_appTests;
+			productName = piggy_bankers_appTests;
+			productReference = CFDB82A22976F08E001317A3 /* piggy_bankers_appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFDB82AB2976F08E001317A3 /* piggy_bankers_appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDB82BC2976F08E001317A3 /* Build configuration list for PBXNativeTarget "piggy_bankers_appUITests" */;
+			buildPhases = (
+				CFDB82A82976F08E001317A3 /* Sources */,
+				CFDB82A92976F08E001317A3 /* Frameworks */,
+				CFDB82AA2976F08E001317A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFDB82AE2976F08E001317A3 /* PBXTargetDependency */,
+			);
+			name = piggy_bankers_appUITests;
+			productName = piggy_bankers_appUITests;
+			productReference = CFDB82AC2976F08E001317A3 /* piggy_bankers_appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFDB828A2976F08D001317A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CFDB82912976F08D001317A3 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CFDB82A12976F08E001317A3 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CFDB82912976F08D001317A3;
+					};
+					CFDB82AB2976F08E001317A3 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CFDB82912976F08D001317A3;
+					};
+				};
+			};
+			buildConfigurationList = CFDB828D2976F08D001317A3 /* Build configuration list for PBXProject "piggy_bankers_app" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFDB82892976F08D001317A3;
+			productRefGroup = CFDB82932976F08D001317A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFDB82912976F08D001317A3 /* piggy_bankers_app */,
+				CFDB82A12976F08E001317A3 /* piggy_bankers_appTests */,
+				CFDB82AB2976F08E001317A3 /* piggy_bankers_appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFDB82902976F08D001317A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDB829D2976F08E001317A3 /* Preview Assets.xcassets in Resources */,
+				CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDB82A02976F08E001317A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDB82AA2976F08E001317A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFDB828E2976F08D001317A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDB82982976F08D001317A3 /* ContentView.swift in Sources */,
+				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDB829E2976F08E001317A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDB82A72976F08E001317A3 /* piggy_bankers_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDB82A82976F08E001317A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDB82B32976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift in Sources */,
+				CFDB82B12976F08E001317A3 /* piggy_bankers_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFDB82A42976F08E001317A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFDB82912976F08D001317A3 /* piggy_bankers_app */;
+			targetProxy = CFDB82A32976F08E001317A3 /* PBXContainerItemProxy */;
+		};
+		CFDB82AE2976F08E001317A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFDB82912976F08D001317A3 /* piggy_bankers_app */;
+			targetProxy = CFDB82AD2976F08E001317A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CFDB82B42976F08E001317A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFDB82B52976F08E001317A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFDB82B72976F08E001317A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"piggy_bankers_app/Preview Content\"";
+				DEVELOPMENT_TEAM = Y9WNGWP3CA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone.piggy-bankers-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFDB82B82976F08E001317A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"piggy_bankers_app/Preview Content\"";
+				DEVELOPMENT_TEAM = Y9WNGWP3CA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone.piggy-bankers-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFDB82BA2976F08E001317A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9WNGWP3CA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone.piggy-bankers-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/piggy_bankers_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/piggy_bankers_app";
+			};
+			name = Debug;
+		};
+		CFDB82BB2976F08E001317A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9WNGWP3CA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone.piggy-bankers-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/piggy_bankers_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/piggy_bankers_app";
+			};
+			name = Release;
+		};
+		CFDB82BD2976F08E001317A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9WNGWP3CA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone.piggy-bankers-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = piggy_bankers_app;
+			};
+			name = Debug;
+		};
+		CFDB82BE2976F08E001317A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9WNGWP3CA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone.piggy-bankers-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = piggy_bankers_app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFDB828D2976F08D001317A3 /* Build configuration list for PBXProject "piggy_bankers_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDB82B42976F08E001317A3 /* Debug */,
+				CFDB82B52976F08E001317A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDB82B62976F08E001317A3 /* Build configuration list for PBXNativeTarget "piggy_bankers_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDB82B72976F08E001317A3 /* Debug */,
+				CFDB82B82976F08E001317A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDB82B92976F08E001317A3 /* Build configuration list for PBXNativeTarget "piggy_bankers_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDB82BA2976F08E001317A3 /* Debug */,
+				CFDB82BB2976F08E001317A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDB82BC2976F08E001317A3 /* Build configuration list for PBXNativeTarget "piggy_bankers_appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDB82BD2976F08E001317A3 /* Debug */,
+				CFDB82BE2976F08E001317A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFDB828A2976F08D001317A3 /* Project object */;
+}
