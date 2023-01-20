@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
-		CFDB82982976F08D001317A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* ContentView.swift */; };
+		CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* WelcomeView.swift */; };
 		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
 		CFDB829D2976F08E001317A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */; };
 		CFDB82A72976F08E001317A3 /* piggy_bankers_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82A62976F08E001317A3 /* piggy_bankers_appTests.swift */; };
 		CFDB82B12976F08E001317A3 /* piggy_bankers_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82B02976F08E001317A3 /* piggy_bankers_appUITests.swift */; };
 		CFDB82B32976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82B22976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift */; };
+		CFDB82C0297AE8BF001317A3 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82BF297AE8BF001317A3 /* UserManager.swift */; };
+		CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82C3297AFE8B001317A3 /* LogInView.swift */; };
+		CFDB82C6297AFE97001317A3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82C5297AFE97001317A3 /* SignUpView.swift */; };
+		CFDB82C8297B05D7001317A3 /* ActiveUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */; };
+		CFDB82CA297B06C8001317A3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82C9297B06C8001317A3 /* HomeView.swift */; };
+		CFDB82CC297B06D4001317A3 /* KidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82CB297B06D4001317A3 /* KidsView.swift */; };
+		CFDB82CE297B06E6001317A3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82CD297B06E6001317A3 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
-		CFDB82972976F08D001317A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CFDB82972976F08D001317A3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		CFDB82992976F08E001317A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CFDB82A22976F08E001317A3 /* piggy_bankers_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = piggy_bankers_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,13 @@
 		CFDB82AC2976F08E001317A3 /* piggy_bankers_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = piggy_bankers_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82B02976F08E001317A3 /* piggy_bankers_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appUITests.swift; sourceTree = "<group>"; };
 		CFDB82B22976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CFDB82BF297AE8BF001317A3 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CFDB82C3297AFE8B001317A3 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		CFDB82C5297AFE97001317A3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUserView.swift; sourceTree = "<group>"; };
+		CFDB82C9297B06C8001317A3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CFDB82CB297B06D4001317A3 /* KidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsView.swift; sourceTree = "<group>"; };
+		CFDB82CD297B06E6001317A3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */,
-				CFDB82972976F08D001317A3 /* ContentView.swift */,
+				CFDB82C2297AE8D5001317A3 /* View */,
+				CFDB82C1297AE8CB001317A3 /* Controller */,
 				CFDB82992976F08E001317A3 /* Assets.xcassets */,
 				CFDB829B2976F08E001317A3 /* Preview Content */,
 			);
@@ -125,6 +140,28 @@
 				CFDB82B22976F08E001317A3 /* piggy_bankers_appUITestsLaunchTests.swift */,
 			);
 			path = piggy_bankers_appUITests;
+			sourceTree = "<group>";
+		};
+		CFDB82C1297AE8CB001317A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB82BF297AE8BF001317A3 /* UserManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFDB82C2297AE8D5001317A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB82972976F08D001317A3 /* WelcomeView.swift */,
+				CFDB82C3297AFE8B001317A3 /* LogInView.swift */,
+				CFDB82C5297AFE97001317A3 /* SignUpView.swift */,
+				CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */,
+				CFDB82C9297B06C8001317A3 /* HomeView.swift */,
+				CFDB82CB297B06D4001317A3 /* KidsView.swift */,
+				CFDB82CD297B06E6001317A3 /* ProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFDB82982976F08D001317A3 /* ContentView.swift in Sources */,
+				CFDB82C0297AE8BF001317A3 /* UserManager.swift in Sources */,
+				CFDB82CE297B06E6001317A3 /* ProfileView.swift in Sources */,
+				CFDB82CA297B06C8001317A3 /* HomeView.swift in Sources */,
+				CFDB82C6297AFE97001317A3 /* SignUpView.swift in Sources */,
+				CFDB82CC297B06D4001317A3 /* KidsView.swift in Sources */,
+				CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */,
+				CFDB82C8297B05D7001317A3 /* ActiveUserView.swift in Sources */,
+				CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
