@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
+struct ContentView: View {
     @StateObject var userManager = UserManager()
     
     var body: some View {
@@ -58,8 +58,8 @@ struct WelcomeView: View {
     }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        ContentView()
     }
 }

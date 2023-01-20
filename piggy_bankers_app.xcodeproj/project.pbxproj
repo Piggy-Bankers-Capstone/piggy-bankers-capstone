@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
-		CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* WelcomeView.swift */; };
+		CFDB82982976F08D001317A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* ContentView.swift */; };
 		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
 		CFDB829D2976F08E001317A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */; };
 		CFDB82A72976F08E001317A3 /* piggy_bankers_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82A62976F08E001317A3 /* piggy_bankers_appTests.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
-		CFDB82972976F08D001317A3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		CFDB82972976F08D001317A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFDB82992976F08E001317A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFDB829C2976F08E001317A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CFDB82A22976F08E001317A3 /* piggy_bankers_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = piggy_bankers_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +153,7 @@
 		CFDB82C2297AE8D5001317A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CFDB82972976F08D001317A3 /* WelcomeView.swift */,
+				CFDB82972976F08D001317A3 /* ContentView.swift */,
 				CFDB82C3297AFE8B001317A3 /* LogInView.swift */,
 				CFDB82C5297AFE97001317A3 /* SignUpView.swift */,
 				CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */,
@@ -299,7 +299,7 @@
 				CFDB82CA297B06C8001317A3 /* HomeView.swift in Sources */,
 				CFDB82C6297AFE97001317A3 /* SignUpView.swift in Sources */,
 				CFDB82CC297B06D4001317A3 /* KidsView.swift in Sources */,
-				CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */,
+				CFDB82982976F08D001317A3 /* ContentView.swift in Sources */,
 				CFDB82C8297B05D7001317A3 /* ActiveUserView.swift in Sources */,
 				CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
