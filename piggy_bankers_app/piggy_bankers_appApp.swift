@@ -11,7 +11,7 @@ import SwiftUI
 struct piggy_bankers_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
