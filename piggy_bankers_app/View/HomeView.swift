@@ -7,16 +7,15 @@
 
 import SwiftUI
 
+struct Child: Identifiable {
+    var id = UUID()
+    var total_balance: Decimal
+    var goals: [(goal_name: String, goal_balance: Decimal)]
+}
+
 struct HomeView: View {
-    @EnvironmentObject var userManager: UserManager
-    
     var body: some View {
-        Text("home view")
+        Text("profile view")
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
