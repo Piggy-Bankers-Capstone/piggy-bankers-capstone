@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */; };
+		CF5FDC1D2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1C2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift */; };
+		CF5FDC202989E20E00F7FCA8 /* KidDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */; };
+		CF5FDC222989E2F500F7FCA8 /* AddKidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */; };
+		CF5FDC242989E50700F7FCA8 /* GoalEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC232989E50700F7FCA8 /* GoalEditorView.swift */; };
+		CF5FDC282989E54000F7FCA8 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC272989E54000F7FCA8 /* Kid.swift */; };
+		CF5FDC2A2989E57F00F7FCA8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC292989E57F00F7FCA8 /* Goal.swift */; };
 		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
 		CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* WelcomeView.swift */; };
 		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
@@ -41,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		CF5FDC1C2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidSummaryOnProfileView.swift; sourceTree = "<group>"; };
+		CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDetailsView.swift; sourceTree = "<group>"; };
+		CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKidView.swift; sourceTree = "<group>"; };
+		CF5FDC232989E50700F7FCA8 /* GoalEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditorView.swift; sourceTree = "<group>"; };
+		CF5FDC272989E54000F7FCA8 /* Kid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
+		CF5FDC292989E57F00F7FCA8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
 		CFDB82972976F08D001317A3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -85,6 +99,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF5FDC182989C0C200F7FCA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF5FDC272989E54000F7FCA8 /* Kid.swift */,
+				CF5FDC292989E57F00F7FCA8 /* Goal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF5FDC192989C16800F7FCA8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */,
+				CF5FDC1C2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CF5FDC1E2989E1F300F7FCA8 /* Kid */ = {
+			isa = PBXGroup;
+			children = (
+				CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */,
+				CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */,
+				CF5FDC232989E50700F7FCA8 /* GoalEditorView.swift */,
+			);
+			path = Kid;
+			sourceTree = "<group>";
+		};
 		CFDB82892976F08D001317A3 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */,
+				CF5FDC182989C0C200F7FCA8 /* Model */,
 				CFDB82C2297AE8D5001317A3 /* View */,
 				CFDB82C1297AE8CB001317A3 /* Controller */,
 				CFDB82992976F08E001317A3 /* Assets.xcassets */,
@@ -159,7 +202,9 @@
 				CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */,
 				CFDB82C9297B06C8001317A3 /* HomeView.swift */,
 				CFDB82CB297B06D4001317A3 /* KidsView.swift */,
+				CF5FDC1E2989E1F300F7FCA8 /* Kid */,
 				CFDB82CD297B06E6001317A3 /* ProfileView.swift */,
+				CF5FDC192989C16800F7FCA8 /* Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,12 +341,19 @@
 			files = (
 				CFDB82C0297AE8BF001317A3 /* UserManager.swift in Sources */,
 				CFDB82CE297B06E6001317A3 /* ProfileView.swift in Sources */,
+				CF5FDC242989E50700F7FCA8 /* GoalEditorView.swift in Sources */,
 				CFDB82CA297B06C8001317A3 /* HomeView.swift in Sources */,
 				CFDB82C6297AFE97001317A3 /* SignUpView.swift in Sources */,
+				CF5FDC202989E20E00F7FCA8 /* KidDetailsView.swift in Sources */,
+				CF5FDC222989E2F500F7FCA8 /* AddKidView.swift in Sources */,
 				CFDB82CC297B06D4001317A3 /* KidsView.swift in Sources */,
+				CF5FDC2A2989E57F00F7FCA8 /* Goal.swift in Sources */,
 				CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */,
 				CFDB82C8297B05D7001317A3 /* ActiveUserView.swift in Sources */,
+				CF5FDC1D2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift in Sources */,
+				CF5FDC282989E54000F7FCA8 /* Kid.swift in Sources */,
 				CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */,
+				CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
