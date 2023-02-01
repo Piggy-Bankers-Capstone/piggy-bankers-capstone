@@ -10,6 +10,6 @@ import Foundation
 struct Kid: Identifiable {
     let id = UUID()
     let kid_name: String
-    let total_balance: Double
+    var total_balance: Double
     var goals: [Goal] = []
 }

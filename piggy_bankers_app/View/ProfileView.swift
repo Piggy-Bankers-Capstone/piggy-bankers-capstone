@@ -13,39 +13,28 @@ struct ProfileView: View {
     @State private var kidsDisclosure: Bool = false
     
     var body: some View {
+//        let _ = userManager.fetchKids()
+        
         NavigationView {
             VStack {
                 ProfileHeader()
                 
                 NavigationLink {
-                    // Add kid view
-                    
+                    CreateTransactionView()
+                        .environmentObject(userManager)
                 } label: {
-                    Text("Add Kid")
+                    Text("Transfer Money")
                 }
+                .padding(.vertical, 20)
                 
                 if let kids = userManager.user_kids {
-                    List(kids, id: \.kid_name) { kid in
+                    ForEach(kids, id: \.kid_name) { kid in
                         KidSummaryOnProfileView(kid: kid)
                             .padding(.vertical, 4)
                             .padding(.horizontal, 10)
                     }
-//                    DisclosureGroup(
-//                        isExpanded: $kidsDisclosure,
-//                        content: {
-//                            ForEach(kids, id: \.kid_name) { kid in
-//                                KidSummaryOnProfileView(kid: kid)
-//                                    .padding(.vertical, 4)
-//                                    .padding(.horizontal, 10)
-//                            }
-//                        },
-//                        label: {
-//                            Text("\(kidsDisclosure ? "Hide" : "Show") my kids")
-//                                .foregroundColor(.black)
-//                        }
-//                    )
-                    .padding(.vertical, 20)
-//                    .accentColor(Color(UIColor.systemGroupedBackground))
+                    .padding(.vertical, 0)
+                    .padding(.horizontal, 10)
                 }
             }
         }
