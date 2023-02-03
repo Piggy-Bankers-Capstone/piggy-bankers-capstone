@@ -27,15 +27,13 @@ struct ProfileView: View {
                 }
                 .padding(.vertical, 20)
                 
-                if let kids = userManager.user_kids {
-                    ForEach(kids, id: \.kid_name) { kid in
-                        KidSummaryOnProfileView(kid: kid)
-                            .padding(.vertical, 4)
-                            .padding(.horizontal, 10)
-                    }
-                    .padding(.vertical, 0)
-                    .padding(.horizontal, 10)
+                ForEach(testKids, id: \.kid_name) { kid in
+                    KidSummaryOnProfileView(kid: kid)
+                        .padding(.vertical, 4)
+                        .padding(.horizontal, 10)
                 }
+                .padding(.vertical, 0)
+                .padding(.horizontal, 10)
             }
         }
     }

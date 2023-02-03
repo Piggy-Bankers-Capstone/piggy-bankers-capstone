@@ -16,23 +16,17 @@ struct CreateTransactionView: View {
     @State private var kid_name: String = ""
     
     var body: some View {
-        VStack {
+        Form {
                 
             TextField("How much?", value: $amount, format: .currency(code: "USD"))
             
             TextField("Description", text: $description, axis: .vertical)
                 .lineLimit(3...)
             
-            if let kids = userManager.user_kids {
-                HStack {
-                    Text("Select a child.")
-                    
-                    Picker("Select a child.", selection: $kid_name) {
-                        ForEach(kids, id: \.kid_name) { kid in
-                            Text("\(kid.kid_name)")
-                                .tag(kid.kid_name)
-                        }
-                    }
+            Picker("Select a child.", selection: $kid_name) {
+                ForEach(testKids, id: \.kid_name) { kid in
+                    Text("\(kid.kid_name)")
+                        .tag(kid.kid_name)
                 }
             }
             
@@ -44,7 +38,6 @@ struct CreateTransactionView: View {
                 } label: {
                     Text("Submit")
                 }
-                .listRowBackground(Color(UIColor.systemGroupedBackground))
             }
         }
         .padding()

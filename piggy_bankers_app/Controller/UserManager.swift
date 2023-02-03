@@ -11,7 +11,7 @@ import UIKit
 class UserManager: ObservableObject {
     
     init() {
-        fetchKids()
+//        fetchKids()
     }
     
     @Published var firstName: String = ""
@@ -19,34 +19,27 @@ class UserManager: ObservableObject {
     @Published var username: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
-    @Published var user_kids: [Kid] = [Kid]()
+    @Published var user_kids: [Kid] = testKids
     
     
     func fetchKids() {
         print("fetching kids")
-        
-        self.user_kids = [
-            Kid(kid_name: "jovi", total_balance: 10.0),
-            Kid(kid_name: "rayen", total_balance: 11.0),
-            Kid(kid_name: "mikah", total_balance: 12.0)
-        ]
     }
     
     func fundTransaction(name: String, amount: Double) {
-//        let result = self.user_kids.filter { $0.kid_name == name }.first
-//        
-//        if var kidChosen = result {
-//            print(kidChosen)
-//            print("before: \(kidChosen.total_balance)")
-//            print("amount: \(amount)")
-////            print("balance for \(kidChosen.kid_name) updated.")
-//            kidChosen.total_balance += amount
-//            print("after: \(kidChosen.total_balance)")
-//        }
-//        
-//        print("\(self.user_kids.filter { $0.kid_name == name }.first?.total_balance)")
-//        
-//        print("funds transfered.")
+        let result = user_kids.first { $0.kid_name == name}
+
+        if var kidChosen = result {
+            print(kidChosen)
+            print("before: \(kidChosen.total_balance)")
+            print("amount: \(amount)")
+//            print("balance for \(kidChosen.kid_name) updated.")
+            kidChosen.total_balance = kidChosen.total_balance + amount
+            print("after: \(kidChosen.total_balance)")
+            
+        }
+
+        print("funds transfered.")
     }
     
 }
