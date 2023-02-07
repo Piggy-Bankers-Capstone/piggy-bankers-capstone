@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97871AB529921EA800B0FDA4 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 97871AB429921EA800B0FDA4 /* PostgresClientKit */; };
+		97871AB72992260200B0FDA4 /* TempGoalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97871AB62992260200B0FDA4 /* TempGoalTest.swift */; };
 		CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */; };
 		CF5FDC1D2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1C2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift */; };
 		CF5FDC202989E20E00F7FCA8 /* KidDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */; };
@@ -49,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97871AB62992260200B0FDA4 /* TempGoalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempGoalTest.swift; sourceTree = "<group>"; };
 		CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		CF5FDC1C2989DCE900F7FCA8 /* KidSummaryOnProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidSummaryOnProfileView.swift; sourceTree = "<group>"; };
 		CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDetailsView.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97871AB529921EA800B0FDA4 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 			children = (
 				CF5FDC272989E54000F7FCA8 /* Kid.swift */,
 				CF5FDC292989E57F00F7FCA8 /* Goal.swift */,
+				97871AB62992260200B0FDA4 /* TempGoalTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +233,9 @@
 			dependencies = (
 			);
 			name = piggy_bankers_app;
+			packageProductDependencies = (
+				97871AB429921EA800B0FDA4 /* PostgresClientKit */,
+			);
 			productName = piggy_bankers_app;
 			productReference = CFDB82922976F08D001317A3 /* piggy_bankers_app.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +308,9 @@
 				Base,
 			);
 			mainGroup = CFDB82892976F08D001317A3;
+			packageReferences = (
+				97871AB329921EA800B0FDA4 /* XCRemoteSwiftPackageReference "PostgresClientKit" */,
+			);
 			productRefGroup = CFDB82932976F08D001317A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +369,7 @@
 				CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */,
 				CF5FDC2C298B120900F7FCA8 /* CreateTransactionView.swift in Sources */,
 				CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */,
+				97871AB72992260200B0FDA4 /* TempGoalTest.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +695,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97871AB329921EA800B0FDA4 /* XCRemoteSwiftPackageReference "PostgresClientKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/codewinsdotcom/PostgresClientKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97871AB429921EA800B0FDA4 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97871AB329921EA800B0FDA4 /* XCRemoteSwiftPackageReference "PostgresClientKit" */;
+			productName = PostgresClientKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFDB828A2976F08D001317A3 /* Project object */;
 }
