@@ -9,12 +9,13 @@ import SwiftUI
 
 struct KidsView: View {
     @EnvironmentObject var userManager: UserManager
+    @ObservedObject var kidManager: KidManager = KidManager()
     @State var kids: [Kid] = []
     @State var isAddingKid = false
     
     var body: some View {
         NavigationView {
-            List(kids) { kid in
+            List(kidManager.kids) { kid in
                 NavigationLink(destination: KidDetailsView(kid: kid)) {
                     HStack {
                         Text(kid.kid_name)
