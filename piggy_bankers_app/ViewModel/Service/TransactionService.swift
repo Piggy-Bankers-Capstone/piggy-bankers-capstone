@@ -9,11 +9,22 @@ import Foundation
 import PostgresClientKit
 
 struct TransactionService {
+    
     static func fetchTransactionsPG() -> [Transaction] {
         // Fetches a single goal from POSTGRES using a goal ID. Probably not what will be used in production.
         // currently exists here for testing/proof of concept. In practice, we will probably just query all
         // goals for a single kid.
         var allTransactions: [Transaction] = []
+        
+        // CONSTANT Variables: int associated with column header in transaction table
+//        let transaction_id_col_num = 0
+        let household_id_col_num = 1
+        let profile_id_col_num = 2
+        let transaction_date_col_num = 3
+        let transaction_type_col_num = 4
+        let transaction_amount_col_num = 5
+        let transaction_memo_col_num = 6
+        let transaction_description_col_num = 7
         
         do {
             var configuration = PostgresClientKit.ConnectionConfiguration()
@@ -34,14 +45,14 @@ struct TransactionService {
             
             for row in cursor {
                 let columns = try row.get().columns
-    //            let transaction_id = try columns[0].int()
-                let household_id = try columns[1].int()
-                let profile_id = try columns[2].int()
-                let transaction_date = try columns[3].string()
-                let transaction_type = try columns[4].string()
-                let transaction_amount = try columns[5].double()
-                let transaction_memo = try columns[6].string()
-                let transaction_description = try columns[7].string()
+    //            let transaction_id = try columns[transaction_id_col_num].int()
+                let household_id = try columns[household_id_col_num].int()
+                let profile_id = try columns[profile_id_col_num].int()
+                let transaction_date = try columns[transaction_date_col_num].string()
+                let transaction_type = try columns[transaction_type_col_num].string()
+                let transaction_amount = try columns[transaction_amount_col_num].double()
+                let transaction_memo = try columns[transaction_memo_col_num].string()
+                let transaction_description = try columns[transaction_description_col_num].string()
                 print("\(transaction_amount) - \(transaction_date)")
                 
                 allTransactions.append(Transaction(household_id: household_id, profile_id: profile_id, transaction_date: transaction_date, transaction_type: transaction_type, transaction_amount: transaction_amount, transaction_memo: transaction_memo, transaction_description: transaction_description))
