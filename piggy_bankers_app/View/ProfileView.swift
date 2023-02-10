@@ -8,32 +8,28 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var userManager: UserManager
-    
-    @State private var kidsDisclosure: Bool = false
+    @StateObject var transactionManager = TransactionManager()
     
     var body: some View {
 //        let _ = userManager.fetchKids()
-        
-        NavigationView {
-            VStack {
-                ProfileHeader()
-                
-                NavigationLink {
-                    CreateTransactionView()
-                        .environmentObject(userManager)
-                } label: {
-                    Text("Transfer Money")
+        NavigationStack {
+            List {
+                ForEach(transactionManager.transactions, id:\.id) { transaction in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("\(NumberFormatter.localizedString(from: transaction.transaction_amount as NSNumber, number: .currency))")
+                                .foregroundColor(transaction.transaction_type == "Sent" ? .green : .red)
+                            Text("\(transaction.transaction_memo)")
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .trailing) {
+                            Text("\(transaction.transaction_date)")
+                        }
+                    }
                 }
-                .padding(.vertical, 20)
-                
-                ForEach(testKids, id: \.kid_name) { kid in
-                    KidSummaryOnProfileView(kid: kid)
-                        .padding(.vertical, 4)
-                        .padding(.horizontal, 10)
-                }
-                .padding(.vertical, 0)
-                .padding(.horizontal, 10)
             }
         }
     }
