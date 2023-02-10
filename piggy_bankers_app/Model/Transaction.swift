@@ -11,7 +11,7 @@ struct Transaction: Identifiable {
     let id = UUID()
     let household_id: Int
     let profile_id: Int
-    let transaction_date: String
+    let transaction_date: Date
     let transaction_type: String
     let transaction_amount: Double
     let transaction_memo: String
@@ -19,7 +19,7 @@ struct Transaction: Identifiable {
     
     init(household_id: Int = 1,
          profile_id: Int = 1,
-         transaction_date: String = "",
+         transaction_date: Date = Date(),
          transaction_type: String = "",
          transaction_amount: Double = 0.0,
          transaction_memo: String = "",

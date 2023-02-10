@@ -11,23 +11,14 @@ struct ProfileView: View {
     @StateObject var transactionManager = TransactionManager()
     
     var body: some View {
-//        let _ = userManager.fetchKids()
-        NavigationStack {
-            List {
-                ForEach(transactionManager.transactions, id:\.id) { transaction in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("\(NumberFormatter.localizedString(from: transaction.transaction_amount as NSNumber, number: .currency))")
-                                .foregroundColor(transaction.transaction_type == "Sent" ? .green : .red)
-                            Text("\(transaction.transaction_memo)")
-                                .foregroundColor(.secondary)
-                        }
-                        
-                        Spacer()
-                        
-                        VStack(alignment: .trailing) {
-                            Text("\(transaction.transaction_date)")
-                        }
+        VStack {
+            ProfileHeader(transactionManager: transactionManager)
+                .padding([.vertical], 20)
+            
+            NavigationStack {
+                List {
+                    ForEach(transactionManager.transactions, id:\.id) { transaction in
+                        AllTransactionsRow(transaction: transaction)
                     }
                 }
             }

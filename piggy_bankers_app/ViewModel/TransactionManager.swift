@@ -18,4 +18,5 @@ class TransactionManager: ObservableObject {
     
     @Published var transactions: [Transaction]
     
+    
 }
