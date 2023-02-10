@@ -18,7 +18,12 @@ struct ProfileView: View {
             NavigationStack {
                 List {
                     ForEach(transactionManager.transactions, id:\.id) { transaction in
-                        AllTransactionsRow(transaction: transaction)
+                        NavigationLink {
+                            TransactionDetails(transaction: transaction)
+                        } label: {
+                            AllTransactionsRow(transaction: transaction)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
                     }
                 }
             }
