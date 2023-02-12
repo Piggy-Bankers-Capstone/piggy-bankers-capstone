@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileHeader: View {
-    @EnvironmentObject var userManager: UserManager
+    @ObservedObject var transactionManager: TransactionManager
     
     var body: some View {
         VStack {
@@ -23,10 +23,10 @@ struct ProfileHeader: View {
                     .overlay(Circle().stroke(.blue, lineWidth: 2))
                 
                 VStack(alignment: .leading) {
-                    Text("\(userManager.firstName == "" ? "user's name" : userManager.firstName)")
+                    Text("FirstName LastName")
                         .font(.system(size: 24))
                         .bold()
-                    Text("\(userManager.username == "" ? "user's username" : userManager.username)")
+                    Text("username")
                         .font(.system(size: 16))
                         .italic()
                 }
@@ -37,7 +37,6 @@ struct ProfileHeader: View {
 
 struct ProfileHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeader()
-            .environmentObject(UserManager())
+        ProfileHeader(transactionManager: TransactionManager())
     }
 }

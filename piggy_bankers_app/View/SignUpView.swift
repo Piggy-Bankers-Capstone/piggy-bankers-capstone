@@ -17,6 +17,7 @@ struct SignUpView: View {
             VStack {
                 Text("Piggy")
                     .font(.largeTitle)
+                    .fontWeight(.heavy)
                 
                 Group {
                     TextField("First name", text: $userManager.firstName)

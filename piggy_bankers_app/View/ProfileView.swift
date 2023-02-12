@@ -8,33 +8,23 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var userManager: UserManager
-    
-    @State private var kidsDisclosure: Bool = false
+    @StateObject var transactionManager = TransactionManager()
     
     var body: some View {
-//        let _ = userManager.fetchKids()
-        
-        NavigationView {
-            VStack {
-                ProfileHeader()
-                
-                NavigationLink {
-                    CreateTransactionView()
-                        .environmentObject(userManager)
-                } label: {
-                    Text("Transfer Money")
-                }
-                .padding(.vertical, 20)
-                
-                if let kids = userManager.user_kids {
-                    ForEach(kids, id: \.kid_name) { kid in
-                        KidSummaryOnProfileView(kid: kid)
-                            .padding(.vertical, 4)
-                            .padding(.horizontal, 10)
+        VStack {
+            ProfileHeader(transactionManager: transactionManager)
+                .padding([.vertical], 20)
+            
+            NavigationStack {
+                List {
+                    ForEach(transactionManager.transactions, id:\.id) { transaction in
+                        NavigationLink {
+                            TransactionDetails(transaction: transaction)
+                        } label: {
+                            AllTransactionsRow(transaction: transaction)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
                     }
-                    .padding(.vertical, 0)
-                    .padding(.horizontal, 10)
                 }
             }
         }
