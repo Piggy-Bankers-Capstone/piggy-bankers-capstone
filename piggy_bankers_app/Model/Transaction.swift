@@ -10,12 +10,12 @@ import Foundation
 struct Transaction: Identifiable, Hashable {
     let id = UUID()
     let household_id: Int
-    let profile_id: Int
-    let transaction_date: Date
-    let transaction_type: String
-    let transaction_amount: Double
-    let transaction_memo: String
-    let transaction_description: String
+    var profile_id: Int
+    var transaction_date: Date
+    var transaction_type: String
+    var transaction_amount: Double
+    var transaction_memo: String
+    var transaction_description: String
     
     init(household_id: Int = 1,
          profile_id: Int = 1,

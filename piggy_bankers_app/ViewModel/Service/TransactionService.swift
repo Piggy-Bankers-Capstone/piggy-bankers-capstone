@@ -10,10 +10,37 @@ import PostgresClientKit
 
 struct TransactionService {
     
-    static func fetchTransactionsPG() -> [Transaction] {
-        // Fetches a single goal from POSTGRES using a goal ID. Probably not what will be used in production.
-        // currently exists here for testing/proof of concept. In practice, we will probably just query all
-        // goals for a single kid.
+    static func createTransaction(transaction: Transaction) {
+        let newTransaction = transaction
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "piggybankers.cm676jibchhn.us-west-1.rds.amazonaws.com"
+            configuration.database = "piggy"
+            configuration.user = "postgres"
+            configuration.credential = .scramSHA256(password: "piggybankers")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+//            defer { connection.close() }
+            
+            let query = "INSERT INTO app.transaction VALUES (103, \(newTransaction.household_id), \(newTransaction.profile_id), '\(newTransaction.transaction_date)', '\(newTransaction.transaction_type)', \(newTransaction.transaction_amount), '\(newTransaction.transaction_memo)', '\(newTransaction.transaction_description)');"
+            
+            let statement = try connection.prepareStatement(text: query)
+            defer { statement.close() }
+            
+            let cursor = try statement.execute(parameterValues: [])
+            do { cursor.close() }
+            
+        } catch {
+            print("error creating record in db.transaction: \(error)")
+        }
+        
+        fetchTransactionsPG()
+    }
+    
+    static func fetchTransactionsPG() -> [Transaction]? {
+        // Fetches all transaction of user. Probably not what will be used in production.
+        // currently exists here for testing/proof of concept.
         var allTransactions: [Transaction] = []
         
         // CONSTANT Variables: int associated with column header in transaction table

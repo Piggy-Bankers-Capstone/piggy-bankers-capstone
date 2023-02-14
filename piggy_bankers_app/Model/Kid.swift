@@ -13,9 +13,3 @@ struct Kid: Identifiable {
     var total_balance: Double
     var goals: [Goal] = []
 }
-
-let testKids = [
-    Kid(kid_name: "jovi", total_balance: 10.0),
-    Kid(kid_name: "rayen", total_balance: 11.0),
-    Kid(kid_name: "mikah", total_balance: 12.0)
-]

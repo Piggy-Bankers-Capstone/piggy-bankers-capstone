@@ -8,33 +8,49 @@
 import SwiftUI
 
 struct CreateTransactionView: View {
-    @EnvironmentObject var userManager: UserManager
     @Environment(\.dismiss) var dismiss
+    @ObservedObject var transactionManager = TransactionManager()
+    @State private var newTransaction = Transaction()
     
-    @State private var amount: Double = 0.0
-    @State private var description: String = "This is the default description for sending/requesting money."
-    @State private var kid_name: String = ""
+    private let dummyKids = [100,101,102,103]
     
     var body: some View {
         Form {
+            Section("Placeholder") {
+                Text("ID placeholder")
+                    .lineLimit(0)
+                HStack {
+                    Text("Household placeholder")
+                    Text("Profile placeholder")
+                }
+            }
+            
+            Section("Details") {
+                Text("Date: \(Date())")
                 
-            TextField("How much?", value: $amount, format: .currency(code: "USD"))
+                TextField("How much?", value: $newTransaction.transaction_amount, format: .currency(code: "USD"))
+                
+                TextField("Send or Request?", text: $newTransaction.transaction_type)
+            }
             
-            TextField("Description", text: $description, axis: .vertical)
-                .lineLimit(3...)
+            Section {
+                TextField("Memo", text: $newTransaction.transaction_memo)
+            }
             
-            Picker("Select a child.", selection: $kid_name) {
-                ForEach(testKids, id: \.kid_name) { kid in
-                    Text("\(kid.kid_name)")
-                        .tag(kid.kid_name)
+            Section {
+                TextField("Description", text: $newTransaction.transaction_description)
+            }
+            
+            Picker("Select a child.", selection: $newTransaction.profile_id) {
+                ForEach(dummyKids, id: \.self) { kid in
+                    Text("\(kid)")
+                        .tag(kid)
                 }
             }
             
             Section {
                 Button {
-                    userManager.fundTransaction(name: kid_name, amount: amount)
-                    print("transaction initiated.")
-                    
+                    transactionManager.createTransaction(transaction: newTransaction)
                 } label: {
                     Text("Submit")
                 }
@@ -44,9 +60,8 @@ struct CreateTransactionView: View {
     }
 }
 
-struct CreateTransactionView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateTransactionView()
-            .environmentObject(UserManager())
-    }
-}
+//struct CreateTransactionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateTransactionView(, transactionManager: <#TransactionManager#>)
+//    }
+//}

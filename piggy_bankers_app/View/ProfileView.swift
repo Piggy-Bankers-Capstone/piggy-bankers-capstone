@@ -16,15 +16,24 @@ struct ProfileView: View {
                 .padding([.vertical], 20)
             
             NavigationStack {
-                List {
-                    ForEach(transactionManager.transactions, id:\.id) { transaction in
-                        NavigationLink {
-                            TransactionDetails(transaction: transaction)
-                        } label: {
-                            AllTransactionsRow(transaction: transaction)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                NavigationLink {
+                    CreateTransactionView()
+                } label: {
+                    Text("Create Transaction")
+                }
+                if let transactions = transactionManager.transactions {
+                    List {
+                        ForEach(transactions) { transaction in
+                            NavigationLink {
+                                TransactionDetails(transaction: transaction)
+                            } label: {
+                                AllTransactionsRow(transaction: transaction)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
                         }
                     }
+                } else {
+                    Text("No transactions were found.")
                 }
             }
         }
