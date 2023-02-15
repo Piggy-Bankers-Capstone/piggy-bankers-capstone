@@ -24,6 +24,8 @@
 		CF5FDC582995F28B00F7FCA8 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC572995F28B00F7FCA8 /* TransactionManager.swift */; };
 		CF5FDC5A2996ADBD00F7FCA8 /* AllTransactionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC592996ADBD00F7FCA8 /* AllTransactionsRow.swift */; };
 		CF5FDC5C2996B13E00F7FCA8 /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC5B2996B13E00F7FCA8 /* TransactionDetails.swift */; };
+		CF5FDC5F299D264800F7FCA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC5E299D264800F7FCA8 /* Extensions.swift */; };
+		CF5FDC61299D2E5E00F7FCA8 /* KidProfileTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */; };
 		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
 		CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* WelcomeView.swift */; };
 		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		CF5FDC572995F28B00F7FCA8 /* TransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 		CF5FDC592996ADBD00F7FCA8 /* AllTransactionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsRow.swift; sourceTree = "<group>"; };
 		CF5FDC5B2996B13E00F7FCA8 /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
+		CF5FDC5E299D264800F7FCA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidProfileTag.swift; sourceTree = "<group>"; };
 		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
 		CFDB82972976F08D001317A3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		CF5FDC192989C16800F7FCA8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CFDB82CD297B06E6001317A3 /* ProfileView.swift */,
 				CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */,
 				CF5FDC2B298B120900F7FCA8 /* CreateTransactionView.swift */,
 				CF5FDC592996ADBD00F7FCA8 /* AllTransactionsRow.swift */,
@@ -153,11 +158,21 @@
 		CF5FDC1E2989E1F300F7FCA8 /* Kid */ = {
 			isa = PBXGroup;
 			children = (
+				CFDB82CB297B06D4001317A3 /* KidsView.swift */,
 				CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */,
 				CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */,
 				CF5FDC232989E50700F7FCA8 /* GoalEditorView.swift */,
+				CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */,
 			);
 			path = Kid;
+			sourceTree = "<group>";
+		};
+		CF5FDC5D299D263400F7FCA8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CF5FDC5E299D264800F7FCA8 /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		CFDB82892976F08D001317A3 = {
@@ -183,6 +198,7 @@
 		CFDB82942976F08D001317A3 /* piggy_bankers_app */ = {
 			isa = PBXGroup;
 			children = (
+				CF5FDC5D299D263400F7FCA8 /* Utilities */,
 				CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */,
 				CF5FDC182989C0C200F7FCA8 /* Model */,
 				CFDB82C2297AE8D5001317A3 /* View */,
@@ -238,9 +254,7 @@
 				CFDB82C5297AFE97001317A3 /* SignUpView.swift */,
 				CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */,
 				CFDB82C9297B06C8001317A3 /* HomeView.swift */,
-				CFDB82CB297B06D4001317A3 /* KidsView.swift */,
 				CF5FDC1E2989E1F300F7FCA8 /* Kid */,
-				CFDB82CD297B06E6001317A3 /* ProfileView.swift */,
 				CF5FDC192989C16800F7FCA8 /* Profile */,
 			);
 			path = View;
@@ -403,6 +417,8 @@
 				CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */,
 				97417E3129949064009CE969 /* GoalService.swift in Sources */,
 				97417E2E29948F19009CE969 /* GoalManager.swift in Sources */,
+				CF5FDC61299D2E5E00F7FCA8 /* KidProfileTag.swift in Sources */,
+				CF5FDC5F299D264800F7FCA8 /* Extensions.swift in Sources */,
 				CF5FDC582995F28B00F7FCA8 /* TransactionManager.swift in Sources */,
 				97417E3529949351009CE969 /* KidService.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,

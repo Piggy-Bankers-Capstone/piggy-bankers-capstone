@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @EnvironmentObject var userManager: UserManager
+    @State var firstName: String = ""
+    @State var lastName: String = ""
+    @State var username: String = ""
+    @State var password: String = ""
+    @State var confirmPassword: String = ""
     
     var body: some View {
         ZStack {
@@ -20,31 +24,31 @@ struct SignUpView: View {
                     .fontWeight(.heavy)
                 
                 Group {
-                    TextField("First name", text: $userManager.firstName)
+                    TextField("First name", text: $firstName)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
                     
-                    TextField("Last name", text: $userManager.lastName)
+                    TextField("Last name", text: $lastName)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
                     
-                    TextField("username", text: $userManager.username)
+                    TextField("username", text: $username)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
                     
-                    SecureField("Password", text: $userManager.password)
+                    SecureField("Password", text: $password)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
                     
-                    SecureField("Confirm Password", text: $userManager.confirmPassword)
+                    SecureField("Confirm Password", text: $confirmPassword)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
@@ -65,7 +69,6 @@ struct SignUpView: View {
                 
                 NavigationLink {
                     LogInView()
-                        .environmentObject(userManager)
                 } label: {
                     Text("Already have an account? Log in.")
                 }
@@ -79,6 +82,5 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
-            .environmentObject(UserManager())
     }
 }

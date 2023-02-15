@@ -8,12 +8,37 @@
 import Foundation
 import PostgresClientKit
 
-struct TransactionService {
+class TransactionService: ObservableObject {
     
-    static func fetchTransactionsPG() -> [Transaction] {
-        // Fetches a single goal from POSTGRES using a goal ID. Probably not what will be used in production.
-        // currently exists here for testing/proof of concept. In practice, we will probably just query all
-        // goals for a single kid.
+    static func createTransaction(transaction: Transaction) {
+        let newTransaction = transaction
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "piggybankers.cm676jibchhn.us-west-1.rds.amazonaws.com"
+            configuration.database = "piggy"
+            configuration.user = "postgres"
+            configuration.credential = .scramSHA256(password: "piggybankers")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+//            defer { connection.close() }
+            
+            let query = "INSERT INTO app.transaction VALUES (\(newTransaction.profile_id), \(newTransaction.household_id), \(newTransaction.profile_id), '\(newTransaction.transaction_date)', '\(newTransaction.transaction_type)', \(newTransaction.transaction_amount), '\(newTransaction.transaction_memo)', '\(newTransaction.transaction_description)');"
+            
+            let statement = try connection.prepareStatement(text: query)
+            defer { statement.close() }
+            
+            let cursor = try statement.execute(parameterValues: [])
+            do { cursor.close() }
+            
+        } catch {
+            print("error creating record in db.transaction: \(error)")
+        }
+    }
+    
+    static func fetchTransactionsPG() -> [Transaction]? {
+        // Fetches all transaction of user. Probably not what will be used in production.
+        // currently exists here for testing/proof of concept.
         var allTransactions: [Transaction] = []
         
         // CONSTANT Variables: int associated with column header in transaction table
@@ -53,25 +78,10 @@ struct TransactionService {
                 let transaction_amount = try columns[transaction_amount_col_num].double()
                 let transaction_memo = try columns[transaction_memo_col_num].string()
                 let transaction_description = try columns[transaction_description_col_num].string()
-                print("\(transaction_amount) - \(transaction_date)")
                 
-                let isoDate = transaction_date
-                print(isoDate)
-
-                let dateFormatter = DateFormatter()
-                dateFormatter.locale = Locale(identifier: "en_US") // set locale to reliable US_POSIX
-                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                var dateOf = Date()
-                if let date = dateFormatter.date(from: isoDate) {
-                    dateOf = date
-                }
-                
-                print(dateOf)
-
-                let calendar = Calendar.current
-                let components = calendar.dateComponents([.year, .month, .day], from: dateOf)
-                
-                let finalDate: Date = calendar.date(from: components) ?? Date()
+                // transaction_date from PG is stored as String. shortDate() is an extension of String that converts String to Date.
+                // String regex must match "yyyy-MM-dd HH:mm:ss"
+                let finalDate: Date = transaction_date.shortDate()
                 
                 allTransactions.append(Transaction(household_id: household_id, profile_id: profile_id, transaction_date: finalDate, transaction_type: transaction_type, transaction_amount: transaction_amount, transaction_memo: transaction_memo, transaction_description: transaction_description))
             }

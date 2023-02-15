@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct LogInView: View {
-    @EnvironmentObject var userManager: UserManager
-    
+    // temp - delete once db auth set up
+    @State var username: String = ""
+    @State var password: String = ""
     
     var body: some View {
         ZStack {
@@ -20,13 +21,13 @@ struct LogInView: View {
                     .font(.largeTitle)
                 
                 Group {
-                    TextField("username", text: $userManager.username)
+                    TextField("username", text: $username)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
                     
-                    SecureField("Password", text: $userManager.password)
+                    SecureField("Password", text: $password)
                         .textFieldStyle(.plain)
                         .padding()
                         .disableAutocorrection(true)
@@ -47,7 +48,6 @@ struct LogInView: View {
                 
                 NavigationLink {
                     SignUpView()
-                        .environmentObject(userManager)
                 } label: {
                     Text("Don't have an account? Sign Up")
                 }
@@ -61,6 +61,5 @@ struct LogInView: View {
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
         LogInView()
-            .environmentObject(UserManager())
     }
 }
