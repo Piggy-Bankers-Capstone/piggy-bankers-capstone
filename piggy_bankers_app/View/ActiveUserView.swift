@@ -34,6 +34,20 @@ struct ActiveUserView: View {
                 }
                 .tag("Profile")
         }
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                
+                Menu {
+                    Button("Update User Info") { }
+                    Button("Create Kid") { }
+                    Button("Create Transaction") { }
+                    Button("Settings...") { }
+                    Button("Sign Out", role: .destructive) { }
+                } label: {
+                    Label("", systemImage: "gearshape.fill")
+                }
+            }
+        }
     }
 }
 
