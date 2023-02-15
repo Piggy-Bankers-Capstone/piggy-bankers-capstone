@@ -22,6 +22,7 @@ class TransactionManager: ObservableObject {
     
     func createTransaction(transaction: Transaction) {
         TransactionService.createTransaction(transaction: transaction)
+        transactions!.append(transaction)
     }
     
     func refreshTransactions() {

@@ -12,12 +12,12 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            ProfileHeader(transactionManager: transactionManager)
+            ProfileHeader()
                 .padding([.top], 20)
             
             HStack {
                 NavigationLink {
-                    CreateTransactionView()
+                    CreateTransactionView(transactionManager: transactionManager)
                 } label: {
                     Text("Create Transaction")
                 }
@@ -44,6 +44,7 @@ struct ProfileView: View {
                 Text("No transactions were found.")
             }
         }
+        //.environmentObject(transactionManager)
     }
 }
 

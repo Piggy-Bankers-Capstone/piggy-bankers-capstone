@@ -8,7 +8,7 @@
 import Foundation
 
 struct Transaction: Identifiable, Hashable {
-    let id = UUID()
+    let id : UUID
     let household_id: Int
     var profile_id: Int
     var transaction_date: Date
@@ -17,7 +17,9 @@ struct Transaction: Identifiable, Hashable {
     var transaction_memo: String
     var transaction_description: String
     
-    init(household_id: Int = 1,
+    init(
+        id: UUID = UUID(),
+         household_id: Int = 1,
          profile_id: Int = 1,
          transaction_date: Date = Date(),
          transaction_type: String = "",
@@ -25,6 +27,7 @@ struct Transaction: Identifiable, Hashable {
          transaction_memo: String = "",
          transaction_description: String = ""
     ) {
+        self.id = id
         self.household_id = household_id
         self.profile_id = profile_id
         self.transaction_date = transaction_date

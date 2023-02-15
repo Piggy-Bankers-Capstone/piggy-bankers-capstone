@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateTransactionView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var transactionManager = TransactionManager()
+    @ObservedObject var transactionManager: TransactionManager
     @State private var newTransaction = Transaction()
     
     private let dummyKids = [100,101,102,103,104,105]
@@ -51,7 +51,7 @@ struct CreateTransactionView: View {
             Section {
                 Button {
                     transactionManager.createTransaction(transaction: newTransaction)
-                    transactionManager.refreshTransactions()
+                    // transactionManager.refreshTransactions()
                 } label: {
                     Text("Submit")
                 }

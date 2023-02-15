@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileHeader: View {
-    @ObservedObject var transactionManager: TransactionManager
+    @EnvironmentObject var transactionManager: TransactionManager
     
     var body: some View {
         VStack {
@@ -37,6 +37,6 @@ struct ProfileHeader: View {
 
 struct ProfileHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeader(transactionManager: TransactionManager())
+        ProfileHeader()
     }
 }
