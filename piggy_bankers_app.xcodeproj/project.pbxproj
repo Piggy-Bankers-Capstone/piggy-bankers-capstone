@@ -11,6 +11,7 @@
 		97417E3129949064009CE969 /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97417E3029949064009CE969 /* GoalService.swift */; };
 		97417E332994932B009CE969 /* KidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97417E322994932B009CE969 /* KidManager.swift */; };
 		97417E3529949351009CE969 /* KidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97417E3429949351009CE969 /* KidService.swift */; };
+		97726C52299D4022001CBDEC /* PGConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97726C51299D4022001CBDEC /* PGConfig.swift */; };
 		97871AB529921EA800B0FDA4 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 97871AB429921EA800B0FDA4 /* PostgresClientKit */; };
 		CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */; };
 		CF5FDC202989E20E00F7FCA8 /* KidDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */; };
@@ -64,6 +65,7 @@
 		97417E3029949064009CE969 /* GoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalService.swift; sourceTree = "<group>"; };
 		97417E322994932B009CE969 /* KidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidManager.swift; sourceTree = "<group>"; };
 		97417E3429949351009CE969 /* KidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidService.swift; sourceTree = "<group>"; };
+		97726C51299D4022001CBDEC /* PGConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGConfig.swift; sourceTree = "<group>"; };
 		CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDetailsView.swift; sourceTree = "<group>"; };
 		CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKidView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				97417E3029949064009CE969 /* GoalService.swift */,
 				97417E3429949351009CE969 /* KidService.swift */,
 				CF5FDC532995EC3200F7FCA8 /* TransactionService.swift */,
+				97726C51299D4022001CBDEC /* PGConfig.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				CF5FDC562995EC5D00F7FCA8 /* Transaction.swift in Sources */,
 				CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */,
 				CF5FDC2C298B120900F7FCA8 /* CreateTransactionView.swift in Sources */,
+				97726C52299D4022001CBDEC /* PGConfig.swift in Sources */,
 				CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */,
 				97417E3129949064009CE969 /* GoalService.swift in Sources */,
 				97417E2E29948F19009CE969 /* GoalManager.swift in Sources */,

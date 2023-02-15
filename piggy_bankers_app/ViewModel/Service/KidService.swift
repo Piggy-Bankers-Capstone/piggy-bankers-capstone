@@ -14,11 +14,7 @@ struct KidService {
         // currently exists here for testing/proof of concept. In practice, we will probably just query all
         // goals for a single kid.
         do {
-            var configuration = PostgresClientKit.ConnectionConfiguration()
-            configuration.host = "piggybankers.cm676jibchhn.us-west-1.rds.amazonaws.com"
-            configuration.database = "piggy"
-            configuration.user = "postgres"
-            configuration.credential = .scramSHA256(password: "piggybankers")
+            var configuration = PGConfig.configuration()
             
             let connection = try PostgresClientKit.Connection(configuration: configuration)
             defer { connection.close() }
