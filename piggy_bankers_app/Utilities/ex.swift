@@ -32,7 +32,7 @@ struct exKid: Identifiable {
     let primary_account: exPrimaryAccount ///** of type UUID [ PrimaryAccount.id ]
     var goals: [exGoal]?                  ///** of type UUID [ Goal.id ]
     var transfers: [exTransfer]?          ///** of type UUID [ Transfer.id ]
-    var last_donation_timestamp: Date?
+//    var last_donation_timestamp: Date?
 //    var donations: [exDonation]?          ///** of type UUID [ Donation.id ]
 }
 
