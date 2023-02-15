@@ -82,6 +82,7 @@ struct exTransaction: Identifiable, Hashable {
     let id : UUID
     let user_id: UUID
     var kid_id: UUID
+    let primary_account_id: UUID
     var transaction_date: Date
     var transaction_type: String
     var transaction_amount: Double
