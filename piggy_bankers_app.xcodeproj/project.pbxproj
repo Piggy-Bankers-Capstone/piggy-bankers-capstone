@@ -26,6 +26,7 @@
 		CF5FDC5C2996B13E00F7FCA8 /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC5B2996B13E00F7FCA8 /* TransactionDetails.swift */; };
 		CF5FDC5F299D264800F7FCA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC5E299D264800F7FCA8 /* Extensions.swift */; };
 		CF5FDC61299D2E5E00F7FCA8 /* KidProfileTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */; };
+		CFDAD0D1299D6E0200F8190B /* ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAD0D0299D6E0200F8190B /* ex.swift */; };
 		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
 		CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* WelcomeView.swift */; };
 		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		CF5FDC5B2996B13E00F7FCA8 /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
 		CF5FDC5E299D264800F7FCA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidProfileTag.swift; sourceTree = "<group>"; };
+		CFDAD0D0299D6E0200F8190B /* ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ex.swift; sourceTree = "<group>"; };
 		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
 		CFDB82972976F08D001317A3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				CF5FDC5E299D264800F7FCA8 /* Extensions.swift */,
+				CFDAD0D0299D6E0200F8190B /* ex.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				CFDB82C6297AFE97001317A3 /* SignUpView.swift in Sources */,
 				CF5FDC202989E20E00F7FCA8 /* KidDetailsView.swift in Sources */,
 				CF5FDC542995EC3200F7FCA8 /* TransactionService.swift in Sources */,
+				CFDAD0D1299D6E0200F8190B /* ex.swift in Sources */,
 				CF5FDC222989E2F500F7FCA8 /* AddKidView.swift in Sources */,
 				CFDB82CC297B06D4001317A3 /* KidsView.swift in Sources */,
 				CF5FDC2A2989E57F00F7FCA8 /* Goal.swift in Sources */,

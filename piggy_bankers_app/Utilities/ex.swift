@@ -1,0 +1,86 @@
+//
+//  ex.swift
+//  piggy_bankers_app
+//
+//  Created by Mitch Rogers on 2/15/23.
+//
+
+import Foundation
+
+/// Session
+/// Credentials
+
+// parent/user model
+struct exUser {
+    let id = UUID()
+    let first_name: String
+    let last_name: String
+    let email: String
+    let password: String
+}
+
+// kid model. Each Kid will have a primary account (checkings) upon Kid creation. A Kid can open new Accounts for savings, college funds, investing, emergency fund, etc. A Kid can create Goals as items they'd like to buy (bball, shoes, dolls, candy, etc). A Kid can transfer money between Accounts. A Kid can donate money from their checkings. Parents control auto donation contributions amount of each Transaction which will accrue over time until donated/paid off.
+struct exKid: Identifiable {
+    let id = UUID()
+    let kid_name: String
+    var account: exAccount
+    var goals: [exGoal]?
+    var transfers: [exTransfer]?
+    var last_donation_timestamp: Date?
+    var donations: [exDonation]?
+}
+
+// Kid.account will be primary account (like bank account with simple checkings/savings); within their primary account they can open accounts for investing to earn interest ('savings' and investing are same if both subject to interest from parents), college account, emergency fund/preparedness account. Big items! Separate of goals
+struct exAccount {
+    let id = UUID()
+    let kid_id: UUID
+    let account_name: String
+    let account_balance: Double
+    let account_description: String
+    let children_accounts: [exAccount]?   // investing portfolio, college fund, emergency fund, etc.
+}
+
+// Goals are items that a Kid wants to save for: basketball, bike, dolls, etc. A Kid's single 'savings' account will be for purchasing Goals.
+struct exGoal: Identifiable {
+    var id = UUID()
+    private(set) var goal_name: String
+    private(set) var goal_amount: Double
+    var goal_priority: String
+}
+
+// Transaction is the transfer of money from 1) User to Kid or 2) Kid to User ("purchasing" something).
+struct exTransaction: Identifiable, Hashable {
+    let id : UUID
+    var kid_id: Int
+    var transaction_date: Date
+    var transaction_type: String
+    var transaction_amount: Double
+    var transaction_memo: String
+    var transaction_description: String
+}
+
+// Transfer is a Kid sending money between their Accounts.
+struct exTransfer {
+    let id = UUID()
+    let transfer_amount: Double
+    let transfer_memo: Double
+    let transfer_timestamp: Date
+    let to_account: String
+    let from_account: String
+}
+
+// Donations are contributions made to charities. Each Kid will have a donations property holding all their donations. Kid.donations will accumulate automatically based on incoming Transactions (they will not be "charged" for their donation upon transaction), but then will pay the Kid.donations total from their primary account balance (checkings) from most recent donation (Kid.last_donation_timestamp)... upon paying off, Kid.donation zeros out and accumulates until next payoff/last_donation_timestamp is recorded. This makes it easy to create visuals for kids to see how much they've donated and how much they continue to be responsible for paying at a future date. Keeps Users up to date too on Kid donation info.
+struct exDonation {
+    let id = UUID()
+    let donation_type: DonationType
+    let donation_amount: Double
+    let donation_timestamp: Date
+    let donation_memo: String
+    
+    // different kinds of donations
+    enum DonationType {
+        case tithing
+        case charity
+        case other
+    }
+}
