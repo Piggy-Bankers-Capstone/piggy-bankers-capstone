@@ -12,7 +12,7 @@ struct CreateTransactionView: View {
     @ObservedObject var transactionManager = TransactionManager()
     @State private var newTransaction = Transaction()
     
-    private let dummyKids = [100,101,102,103]
+    private let dummyKids = [100,101,102,103,104,105]
     
     var body: some View {
         Form {
@@ -51,6 +51,7 @@ struct CreateTransactionView: View {
             Section {
                 Button {
                     transactionManager.createTransaction(transaction: newTransaction)
+                    transactionManager.refreshTransactions()
                 } label: {
                     Text("Submit")
                 }

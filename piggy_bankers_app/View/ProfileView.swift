@@ -13,28 +13,35 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             ProfileHeader(transactionManager: transactionManager)
-                .padding([.vertical], 20)
+                .padding([.top], 20)
             
-            NavigationStack {
+            HStack {
                 NavigationLink {
                     CreateTransactionView()
                 } label: {
                     Text("Create Transaction")
                 }
-                if let transactions = transactionManager.transactions {
-                    List {
-                        ForEach(transactions) { transaction in
-                            NavigationLink {
-                                TransactionDetails(transaction: transaction)
-                            } label: {
-                                AllTransactionsRow(transaction: transaction)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            }
-                        }
-                    }
-                } else {
-                    Text("No transactions were found.")
+                
+                Spacer()
+                
+                Button {
+                    transactionManager.refreshTransactions()
+                } label: {
+                    Label("", systemImage: "arrow.triangle.2.circlepath")
                 }
+            }
+            .padding()
+            
+            Divider()
+            
+            if let transactions = transactionManager.transactions {
+                List(transactions) { transaction in
+                    AllTransactionsRow(transaction: transaction)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .listStyle(.plain)
+            } else {
+                Text("No transactions were found.")
             }
         }
     }
@@ -43,6 +50,5 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
-            .environmentObject(UserManager())
     }
 }

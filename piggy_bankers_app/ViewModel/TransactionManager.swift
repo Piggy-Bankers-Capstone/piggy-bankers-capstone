@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @MainActor
 class TransactionManager: ObservableObject {
@@ -21,6 +22,9 @@ class TransactionManager: ObservableObject {
     
     func createTransaction(transaction: Transaction) {
         TransactionService.createTransaction(transaction: transaction)
-        print("Transaction for \(transaction.profile_id) was added.")
+    }
+    
+    func refreshTransactions() {
+        self.transactions = TransactionService.fetchTransactionsPG()
     }
 }
