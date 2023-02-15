@@ -146,6 +146,7 @@
 		CF5FDC192989C16800F7FCA8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CFDB82CD297B06E6001317A3 /* ProfileView.swift */,
 				CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */,
 				CF5FDC2B298B120900F7FCA8 /* CreateTransactionView.swift */,
 				CF5FDC592996ADBD00F7FCA8 /* AllTransactionsRow.swift */,
@@ -157,6 +158,7 @@
 		CF5FDC1E2989E1F300F7FCA8 /* Kid */ = {
 			isa = PBXGroup;
 			children = (
+				CFDB82CB297B06D4001317A3 /* KidsView.swift */,
 				CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */,
 				CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */,
 				CF5FDC232989E50700F7FCA8 /* GoalEditorView.swift */,
@@ -252,9 +254,7 @@
 				CFDB82C5297AFE97001317A3 /* SignUpView.swift */,
 				CFDB82C7297B05D7001317A3 /* ActiveUserView.swift */,
 				CFDB82C9297B06C8001317A3 /* HomeView.swift */,
-				CFDB82CB297B06D4001317A3 /* KidsView.swift */,
 				CF5FDC1E2989E1F300F7FCA8 /* Kid */,
-				CFDB82CD297B06E6001317A3 /* ProfileView.swift */,
 				CF5FDC192989C16800F7FCA8 /* Profile */,
 			);
 			path = View;
