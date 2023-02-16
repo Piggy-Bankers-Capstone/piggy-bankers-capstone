@@ -37,7 +37,7 @@ struct KidDashboardView: View {
                         .font(.title)
                     
                     ScrollView(.horizontal) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: 10) {
                             ForEach(kid.goals, id:\.self) { goal in
                                 CardView(goal: goal)
                             }
