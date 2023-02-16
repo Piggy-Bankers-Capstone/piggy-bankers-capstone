@@ -14,25 +14,38 @@ struct ActiveUserView: View {
     var body: some View {
         TabView(selection: $defaultView) {
             HomeView()
-                .environmentObject(userManager)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
                 .tag("Home")
             
             KidsView()
-                .environmentObject(userManager)
                 .tabItem {
                     Label("Kids", systemImage: "person.2")
                 }
                 .tag("Kids")
             
             ProfileView()
-                .environmentObject(userManager)
+                
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
                 .tag("Profile")
+        }
+        .environmentObject(userManager)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                
+                Menu {
+                    Button("Update User Info") { }
+                    Button("Create Kid") { }
+                    Button("Create Transaction") { }
+                    Button("Settings...") { }
+                    Button("Sign Out", role: .destructive) { }
+                } label: {
+                    Label("", systemImage: "gearshape.fill")
+                }
+            }
         }
     }
 }

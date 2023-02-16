@@ -24,10 +24,10 @@ struct ProfileView: View {
                 
                 Spacer()
                 
-                Button {
-                    transactionManager.refreshTransactions()
+                NavigationLink {
+                    UserSettingsView()
                 } label: {
-                    Label("", systemImage: "arrow.triangle.2.circlepath")
+                    Label("", systemImage: "gearshape.fill")
                 }
             }
             .padding()

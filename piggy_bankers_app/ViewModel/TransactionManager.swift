@@ -24,8 +24,4 @@ class TransactionManager: ObservableObject {
         TransactionService.createTransaction(transaction: transaction)
         transactions!.append(transaction)
     }
-    
-    func refreshTransactions() {
-        self.transactions = TransactionService.fetchTransactionsPG()
-    }
 }
