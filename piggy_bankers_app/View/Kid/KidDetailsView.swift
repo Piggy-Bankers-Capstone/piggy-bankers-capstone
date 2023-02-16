@@ -24,11 +24,9 @@ struct KidDetailsView: View {
             List {
                 ForEach(kid.goals) { goal in
                     HStack {
-                        Text("\(goal.goal_name): $\(goal.goal_amount, specifier: "%.2f")/$\(goal.total_needed, specifier: "%.2f")")
                         Button(action: {
                             self.newGoalName = goal.goal_name
                             self.newGoalAmount = String(goal.goal_amount)
-                            self.newGoalTotalNeeded = String(goal.total_needed)
                             self.showGoalEditor = true
                         }) {
                             Image(systemName: "square.and.pencil")
@@ -50,7 +48,7 @@ struct KidDetailsView: View {
                         self.showDuplicateError = true
                         return
                     }
-                    self.kid.goals.append(Goal(goal_name: self.newGoalName, goal_amount: goalAmount, total_needed: goalTotalNeeded))
+                    self.kid.goals.append(Goal(goal_name: self.newGoalName, goal_amount: goalAmount))
                 }) {
                     Text("Add Goal")
                 }

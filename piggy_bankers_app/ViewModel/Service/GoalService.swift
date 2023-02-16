@@ -41,7 +41,7 @@ struct GoalService {
                 let pg_goal_amount = try columns[5].double()
                 let pg_goal_total_needed = try columns[6].double()
                 
-                goals.append(Goal(goal_name: pg_goal_name, goal_amount: pg_goal_amount, total_needed: pg_goal_total_needed))
+                goals.append(Goal(goal_name: pg_goal_name, goal_amount: pg_goal_amount))
             }
             return goals
         } catch {

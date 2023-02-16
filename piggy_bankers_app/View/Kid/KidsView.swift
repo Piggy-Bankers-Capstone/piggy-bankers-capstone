@@ -15,23 +15,30 @@ struct KidsView: View {
     
     var body: some View {
         NavigationView {
-            List(kidManager.kids) { kid in
-                NavigationLink(destination: KidDetailsView(kid: kid)) {
-                    HStack {
-                        Text(kid.kid_name)
-                        Spacer()
-                        Text("$\(kid.total_balance, specifier: "%.2f")")
+            VStack {
+                NavigationLink {
+                    KidDashboardView()
+                } label: {
+                    Text("kid dashboard idea")
+                }
+                List(kidManager.kids) { kid in
+                    NavigationLink(destination: KidDetailsView(kid: kid)) {
+                        HStack {
+                            Text(kid.kid_name)
+                            Spacer()
+                            Text("$\(kid.total_balance, specifier: "%.2f")")
+                        }
                     }
                 }
+                .navigationBarTitle("Kids")
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                    self.isAddingKid = true
+                }) {
+                    Image(systemName: "plus")
+                }
+                )
             }
-            .navigationBarTitle("Kids")
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                self.isAddingKid = true
-            }) {
-                Image(systemName: "plus")
-            }
-            )
         }
         .sheet(isPresented: $isAddingKid) {
             AddKidView(kids: self.$kids, isAddingKid: self.$isAddingKid)
