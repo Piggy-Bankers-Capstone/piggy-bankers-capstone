@@ -38,10 +38,10 @@ struct GoalService {
                 let pg_profile_id = try columns[2].int()
                 let pg_goal_name = try columns[3].string()
                 let pg_goal_description = try columns[4].string()
-                let pg_goal_amount = try columns[5].double()
+                let pg_goal_balance = try columns[5].double()
                 let pg_goal_total_needed = try columns[6].double()
                 
-                goals.append(Goal(goal_name: pg_goal_name, goal_amount: pg_goal_amount, total_needed: pg_goal_total_needed))
+                goals.append(Goal(goal_name: pg_goal_name, goal_balance: pg_goal_balance, total_needed: pg_goal_total_needed))
             }
             return goals
         } catch {
