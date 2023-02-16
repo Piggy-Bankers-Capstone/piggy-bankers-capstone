@@ -29,6 +29,11 @@ struct ProfileView: View {
                 } label: {
                     Label("", systemImage: "arrow.triangle.2.circlepath")
                 }
+                NavigationLink {
+                    UserSettingsView()
+                } label: {
+                    Label("", systemImage: "gearshape.fill")
+                }
             }
             .padding()
             

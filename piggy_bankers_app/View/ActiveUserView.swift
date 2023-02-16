@@ -14,26 +14,25 @@ struct ActiveUserView: View {
     var body: some View {
         TabView(selection: $defaultView) {
             HomeView()
-                .environmentObject(userManager)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
                 .tag("Home")
             
             KidsView()
-                .environmentObject(userManager)
                 .tabItem {
                     Label("Kids", systemImage: "person.2")
                 }
                 .tag("Kids")
             
             ProfileView()
-                .environmentObject(userManager)
+                
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
                 .tag("Profile")
         }
+        .environmentObject(userManager)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 
