@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct UserSettingsView: View {
+    @State var notificationsAreOn: Bool = true
+    
     var body: some View {
         Form {
             Section("Preferences") {
                 NavigationLink {
-                    // account info view
+                    UserGeneralInfoView()
                 } label: {
                     Text("Account")
                 }
@@ -23,10 +25,12 @@ struct UserSettingsView: View {
                     Text("Payment Methods")
                 }
                 
+                Toggle("Notifications", isOn: $notificationsAreOn)
+                
                 NavigationLink {
-                    // notifications view
+                    // notification settings view
                 } label: {
-                    Text("Notifications")
+                    Text("Notification Settings")
                 }
                 
                 NavigationLink {
@@ -44,9 +48,9 @@ struct UserSettingsView: View {
             
             Section("Security") {
                 NavigationLink {
-                    // change password view
+                    UserChangePasswordView()
                 } label: {
-                    Text("Change password")
+                    Text("Change Password")
                 }
                 
                 NavigationLink {

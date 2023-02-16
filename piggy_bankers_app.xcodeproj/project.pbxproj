@@ -28,6 +28,8 @@
 		CF5FDC61299D2E5E00F7FCA8 /* KidProfileTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */; };
 		CFDAD0D3299D798000F8190B /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAD0D2299D798000F8190B /* UserSettingsView.swift */; };
 		CFDAD0D5299E7CD300F8190B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAD0D4299E7CD300F8190B /* MenuView.swift */; };
+		CFDAD0D7299E857F00F8190B /* UserGeneralInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAD0D6299E857F00F8190B /* UserGeneralInfoView.swift */; };
+		CFDAD0D9299E87C500F8190B /* UserChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAD0D8299E87C500F8190B /* UserChangePasswordView.swift */; };
 		CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */; };
 		CFDB82982976F08D001317A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB82972976F08D001317A3 /* WelcomeView.swift */; };
 		CFDB829A2976F08E001317A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDB82992976F08E001317A3 /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidProfileTag.swift; sourceTree = "<group>"; };
 		CFDAD0D2299D798000F8190B /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		CFDAD0D4299E7CD300F8190B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CFDAD0D6299E857F00F8190B /* UserGeneralInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGeneralInfoView.swift; sourceTree = "<group>"; };
+		CFDAD0D8299E87C500F8190B /* UserChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChangePasswordView.swift; sourceTree = "<group>"; };
 		CFDB82922976F08D001317A3 /* piggy_bankers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piggy_bankers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDB82952976F08D001317A3 /* piggy_bankers_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = piggy_bankers_appApp.swift; sourceTree = "<group>"; };
 		CFDB82972976F08D001317A3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				CF5FDC5B2996B13E00F7FCA8 /* TransactionDetails.swift */,
 				CFDAD0D4299E7CD300F8190B /* MenuView.swift */,
 				CFDAD0D2299D798000F8190B /* UserSettingsView.swift */,
+				CFDAD0D6299E857F00F8190B /* UserGeneralInfoView.swift */,
+				CFDAD0D8299E87C500F8190B /* UserChangePasswordView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -422,12 +428,14 @@
 				CFDAD0D5299E7CD300F8190B /* MenuView.swift in Sources */,
 				CF5FDC2C298B120900F7FCA8 /* CreateTransactionView.swift in Sources */,
 				CFDAD0D3299D798000F8190B /* UserSettingsView.swift in Sources */,
+				CFDAD0D7299E857F00F8190B /* UserGeneralInfoView.swift in Sources */,
 				CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */,
 				97417E3129949064009CE969 /* GoalService.swift in Sources */,
 				97417E2E29948F19009CE969 /* GoalManager.swift in Sources */,
 				CF5FDC61299D2E5E00F7FCA8 /* KidProfileTag.swift in Sources */,
 				CF5FDC5F299D264800F7FCA8 /* Extensions.swift in Sources */,
 				CF5FDC582995F28B00F7FCA8 /* TransactionManager.swift in Sources */,
+				CFDAD0D9299E87C500F8190B /* UserChangePasswordView.swift in Sources */,
 				97417E3529949351009CE969 /* KidService.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
 				97417E332994932B009CE969 /* KidManager.swift in Sources */,
