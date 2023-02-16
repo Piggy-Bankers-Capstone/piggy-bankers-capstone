@@ -24,11 +24,6 @@ struct ProfileView: View {
                 
                 Spacer()
                 
-                Button {
-                    transactionManager.refreshTransactions()
-                } label: {
-                    Label("", systemImage: "arrow.triangle.2.circlepath")
-                }
                 NavigationLink {
                     UserSettingsView()
                 } label: {
