@@ -1,10 +1,3 @@
-//
-//  KidDetailsView.swift
-//  piggy_bankers_app
-//
-//  Created by Mitch Rogers on 1/31/23.
-//
-
 import SwiftUI
 
 struct KidDetailsView: View {
@@ -16,55 +9,84 @@ struct KidDetailsView: View {
     @State private var newGoalTotalNeeded = ""
     @State private var showDuplicateError = false
     @State private var showGoalEditor = false
-
+    @State private var showAddGoalView = false
+    @State private var newSubBalanceName = ""
+    @State private var newSubBalanceAmount = ""
+    @State private var showAddSubBalanceView = false
+    
     var body: some View {
         VStack {
-            Text(kid.kid_name)
-            Text("$\(kid.total_balance, specifier: "%.2f")")
-            List {
-                ForEach(kid.goals) { goal in
-                    HStack {
-                        Text("\(goal.goal_name): $\(goal.goal_amount, specifier: "%.2f")/$\(goal.total_needed, specifier: "%.2f")")
-                        Button(action: {
-                            self.newGoalName = goal.goal_name
-                            self.newGoalAmount = String(goal.goal_amount)
-                            self.newGoalTotalNeeded = String(goal.total_needed)
-                            self.showGoalEditor = true
-                        }) {
-                            Image(systemName: "square.and.pencil")
-                        }
-                        .sheet(isPresented: $showGoalEditor) {
-                            GoalEditorView(goal: self.$kid.goals[self.kid.goals.firstIndex(where: { $0.id == goal.id })!])
-                        }
-                    }
-                }
+            Group {
+                Text("Welcome, \(kid.kid_name)")
+                    .font(.largeTitle)
+                Text("$\(kid.total_balance, specifier: "%.2f")").font(.largeTitle)
+                
+                Divider()
             }
-            VStack {
-                TextField("Goal name", text: $newGoalName)
-                TextField("Goal amount", text: $newGoalAmount)
-                TextField("Total needed", text: $newGoalTotalNeeded)
-                Button(action: {
-                    guard let goalAmount = Double(newGoalAmount), goalAmount <= self.kid.total_balance else { return }
-                    guard let goalTotalNeeded = Double(newGoalTotalNeeded), goalTotalNeeded >= goalAmount else { return }
-                    if self.kid.goals.contains(where: { $0.goal_name == self.newGoalName }) {
-                        self.showDuplicateError = true
-                        return
+            .padding(.vertical, 20)
+            Group{
+                HStack {
+                    Text("Goals").font(.title)
+                    Spacer()
+                    Button(action: {
+                        self.showAddGoalView = true
+                    }) {
+                        Image(systemName: "plus")
                     }
-                    self.kid.goals.append(Goal(goal_name: self.newGoalName, goal_amount: goalAmount, total_needed: goalTotalNeeded))
-                }) {
-                    Text("Add Goal")
+                    .sheet(isPresented: $showAddGoalView) {
+                        AddGoalView(kid: self.$kid)
+                    }
                 }
-            }.padding()
-            .alert(isPresented: $showDuplicateError) {
-                Alert(title: Text("Duplicate Goal"), message: Text("A goal with the same name already exists"), dismissButton: .default(Text("OK")))
+                
+                List {
+                    ForEach(kid.goals) { goal in
+                        HStack {
+                            Text("\(goal.goal_name): $\(goal.goal_balance, specifier: "%.2f")/$\(goal.total_needed, specifier: "%.2f")")
+                            Button(action: {
+                                self.newGoalName = goal.goal_name
+                                self.newGoalAmount = String(goal.goal_balance)
+                                self.newGoalTotalNeeded = String(goal.total_needed)
+                                self.showGoalEditor = true
+                            }) {
+                                Image(systemName: "square.and.pencil")
+                            }
+                            .sheet(isPresented: $showGoalEditor) {
+                                GoalEditorView(goal: self.$kid.goals[self.kid.goals.firstIndex(where: { $0.id == goal.id })!])
+                            }
+                        }
+                    }
+                }
+                
+                HStack {
+                    Text("SubBalances").font(.title)
+                    Spacer()
+                    Button(action: {
+                        self.showAddSubBalanceView = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $showAddSubBalanceView) {
+                        AddSubBalanceView(kid: self.$kid)
+                    }
+                }
+                
+                List {
+                    ForEach(kid.sub_balances) { subBalance in
+                        HStack {
+                            Text("\(subBalance.name): $\(subBalance.balance, specifier: "%.2f")")
+                        }
+                    }
+                };
             }
         }
     }
 }
 
+
 struct KidDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        KidDetailsView(kid: Kid(kid_name: "elijah", total_balance: 999.9))
+        KidDetailsView(kid: Kid(kid_name: "elijah", total_balance: 999.9, sub_balances: [SubBalance(kid_id: 1, name: "Savings", balance: 50.0)], goals: [Goal(goal_name: "Basketball", goal_balance: 10.0, total_needed: 100.0)]))
             .environmentObject(UserManager())
     }
 }
+

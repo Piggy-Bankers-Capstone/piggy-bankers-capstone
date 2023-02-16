@@ -19,14 +19,14 @@ struct GoalEditorView: View {
             Form {
                 TextField("\(goal.goal_name)", text: $newGoalName)
                 
-                TextField("\(goal.goal_amount.description)", text: $newGoalAmount)
+                TextField("\(goal.goal_balance.description)", text: $newGoalAmount)
                 
                 TextField("\(goal.total_needed.description)", text: $newGoalTotalNeeded)
                 
                 Button(action: {
-                    guard let goalAmount = Double(newGoalAmount), goalAmount <= self.goal.total_needed else { return }
-                    guard let goalTotalNeeded = Double(newGoalTotalNeeded), goalTotalNeeded >= goalAmount else { return }
-                    self.goal = Goal(goal_name: self.newGoalName, goal_amount: goalAmount, total_needed: goalTotalNeeded)
+                    guard let goalBalance = Double(newGoalAmount), goalBalance <= self.goal.total_needed else { return }
+                    guard let goalTotalNeeded = Double(newGoalTotalNeeded), goalTotalNeeded >= goalBalance else { return }
+                    self.goal = Goal(goal_name: self.newGoalName, goal_balance: goalBalance, total_needed: goalTotalNeeded)
                     self.showGoalEditor = false
                 }) {
                     Text("Save")
@@ -39,6 +39,6 @@ struct GoalEditorView: View {
 
 struct GoalEditorView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalEditorView(goal: .constant(Goal(goal_name: "basketball", goal_amount: 20.0, total_needed: 100.0)))
+        GoalEditorView(goal: .constant(Goal(goal_name: "basketball", goal_balance: 20.0, total_needed: 100.0)))
     }
 }

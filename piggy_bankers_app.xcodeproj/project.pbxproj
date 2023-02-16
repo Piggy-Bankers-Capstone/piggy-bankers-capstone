@@ -12,6 +12,9 @@
 		97417E332994932B009CE969 /* KidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97417E322994932B009CE969 /* KidManager.swift */; };
 		97417E3529949351009CE969 /* KidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97417E3429949351009CE969 /* KidService.swift */; };
 		97871AB529921EA800B0FDA4 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 97871AB429921EA800B0FDA4 /* PostgresClientKit */; };
+		B62142A5299EA5EB0054E9CD /* KidsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62142A4299EA5EB0054E9CD /* KidsDashboardView.swift */; };
+		B62142A7299EB3220054E9CD /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62142A6299EB3220054E9CD /* AddGoalView.swift */; };
+		B62142A9299EBC010054E9CD /* AddSubBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62142A8299EBC010054E9CD /* AddSubBalanceView.swift */; };
 		CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */; };
 		CF5FDC202989E20E00F7FCA8 /* KidDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */; };
 		CF5FDC222989E2F500F7FCA8 /* AddKidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */; };
@@ -68,6 +71,9 @@
 		97417E3029949064009CE969 /* GoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalService.swift; sourceTree = "<group>"; };
 		97417E322994932B009CE969 /* KidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidManager.swift; sourceTree = "<group>"; };
 		97417E3429949351009CE969 /* KidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidService.swift; sourceTree = "<group>"; };
+		B62142A4299EA5EB0054E9CD /* KidsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsDashboardView.swift; sourceTree = "<group>"; };
+		B62142A6299EB3220054E9CD /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		B62142A8299EBC010054E9CD /* AddSubBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubBalanceView.swift; sourceTree = "<group>"; };
 		CF5FDC1A2989C17C00F7FCA8 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		CF5FDC1F2989E20E00F7FCA8 /* KidDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDetailsView.swift; sourceTree = "<group>"; };
 		CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKidView.swift; sourceTree = "<group>"; };
@@ -175,6 +181,9 @@
 				CF5FDC212989E2F500F7FCA8 /* AddKidView.swift */,
 				CF5FDC232989E50700F7FCA8 /* GoalEditorView.swift */,
 				CF5FDC60299D2E5E00F7FCA8 /* KidProfileTag.swift */,
+				B62142A4299EA5EB0054E9CD /* KidsDashboardView.swift */,
+				B62142A6299EB3220054E9CD /* AddGoalView.swift */,
+				B62142A8299EBC010054E9CD /* AddSubBalanceView.swift */,
 			);
 			path = Kid;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62142A5299EA5EB0054E9CD /* KidsDashboardView.swift in Sources */,
 				CFDB82C0297AE8BF001317A3 /* UserManager.swift in Sources */,
 				CFDB82CE297B06E6001317A3 /* ProfileView.swift in Sources */,
 				CF5FDC242989E50700F7FCA8 /* GoalEditorView.swift in Sources */,
@@ -427,6 +437,7 @@
 				CFDB82C4297AFE8B001317A3 /* LogInView.swift in Sources */,
 				CFDAD0D5299E7CD300F8190B /* MenuView.swift in Sources */,
 				CF5FDC2C298B120900F7FCA8 /* CreateTransactionView.swift in Sources */,
+				B62142A9299EBC010054E9CD /* AddSubBalanceView.swift in Sources */,
 				CFDAD0D3299D798000F8190B /* UserSettingsView.swift in Sources */,
 				CFDAD0D7299E857F00F8190B /* UserGeneralInfoView.swift in Sources */,
 				CF5FDC1B2989C17C00F7FCA8 /* ProfileHeader.swift in Sources */,
@@ -437,6 +448,7 @@
 				CF5FDC582995F28B00F7FCA8 /* TransactionManager.swift in Sources */,
 				CFDAD0D9299E87C500F8190B /* UserChangePasswordView.swift in Sources */,
 				97417E3529949351009CE969 /* KidService.swift in Sources */,
+				B62142A7299EB3220054E9CD /* AddGoalView.swift in Sources */,
 				CFDB82962976F08D001317A3 /* piggy_bankers_appApp.swift in Sources */,
 				97417E332994932B009CE969 /* KidManager.swift in Sources */,
 			);
